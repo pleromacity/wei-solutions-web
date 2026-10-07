@@ -239,7 +239,6 @@ export default function Contact() {
                 Proud collaborations with statutory and international development programs including:
               </p>
               <div className="flex flex-wrap gap-1.5 font-bold text-[11px]">
-                <span className="px-2.5 py-1 rounded-lg bg-white border border-brand-200 text-brand-800 shadow-xs">NASENI</span>
                 <span className="px-2.5 py-1 rounded-lg bg-white border border-blue-200 text-blue-800 shadow-xs">World Bank; IDEAS Project</span>
                 <span className="px-2.5 py-1 rounded-lg bg-white border border-emerald-200 text-emerald-800 shadow-xs">Federal Ministry Of Education; TVET</span>
               </div>
@@ -324,7 +323,7 @@ export default function Contact() {
                         <input
                           type="text"
                           required
-                          placeholder="e.g. NASENI / Ministry / Corporation"
+                          placeholder="e.g. Ministry / Parastatal / Enterprise"
                           value={formData.organization}
                           onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                           className="w-full px-4 py-3 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent bg-white shadow-xs transition-all"
@@ -370,6 +369,7 @@ export default function Contact() {
                         <option>Corporate Strategy & Culture Transformation</option>
                         <option>Diagnostic Skill Gap Assessment & M&E</option>
                         <option>Team Building & Experiential Programs</option>
+                        <option>Others</option>
                       </select>
                     </div>
 
