@@ -240,8 +240,8 @@ export default function Contact() {
               </p>
               <div className="flex flex-wrap gap-1.5 font-bold text-[11px]">
                 <span className="px-2.5 py-1 rounded-lg bg-white border border-brand-200 text-brand-800 shadow-xs">NASENI</span>
-                <span className="px-2.5 py-1 rounded-lg bg-white border border-blue-200 text-blue-800 shadow-xs">IDEAS Project</span>
-                <span className="px-2.5 py-1 rounded-lg bg-white border border-orange-200 text-orange-800 shadow-xs">TVET</span>
+                <span className="px-2.5 py-1 rounded-lg bg-white border border-blue-200 text-blue-800 shadow-xs">World Bank</span>
+                <span className="px-2.5 py-1 rounded-lg bg-white border border-emerald-200 text-emerald-800 shadow-xs">Federal Ministry Of Education</span>
               </div>
             </div>
 
