@@ -131,7 +131,7 @@ export default function AboutUs() {
                   Hands-On In-Country Presence
                 </div>
                 <div className="text-xs text-slate-600 leading-normal">
-                  Close collaboration with statutory and strategic technical agencies (including partners like NASENI) to guarantee grounded impact.
+                  Close collaboration with statutory and strategic technical agencies to guarantee grounded impact.
                 </div>
               </motion.div>
 

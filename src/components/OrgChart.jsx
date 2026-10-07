@@ -23,7 +23,7 @@ export default function OrgChart() {
             Our Organizational Structure & Staffing
           </h2>
           <p className="mt-3 text-base text-slate-600 leading-relaxed">
-            At WEI Solutions Ltd, we assemble world-class professionals with proven in-country experience and close collaboration with key stakeholders (including partners like <strong>NASENI</strong>) to ensure seamless, real-time project delivery.
+            At WEI Solutions Ltd, we assemble world-class professionals with proven in-country experience and close collaboration with key stakeholders to ensure seamless, real-time project delivery.
           </p>
         </motion.div>
 

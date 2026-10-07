@@ -4,6 +4,12 @@ import { motion } from 'framer-motion';
 export default function Stakeholders() {
   const partners = [
     {
+      id: 'naseni',
+      name: 'NASENI',
+      logoSrc: '/naseni-logo.png',
+      alt: 'NASENI Official Logo'
+    },
+    {
       id: 'world-bank',
       name: 'World Bank; IDEAS Project',
       logoSrc: '/world-bank-logo.png',
@@ -28,7 +34,7 @@ export default function Stakeholders() {
         </div>
 
         {/* Clean Logo Grid with exact names & logos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 items-center justify-center max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center justify-center max-w-4xl mx-auto">
           {partners.map((partner) => (
             <motion.div
               key={partner.id}
