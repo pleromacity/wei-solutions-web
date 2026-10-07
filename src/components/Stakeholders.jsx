@@ -11,13 +11,13 @@ export default function Stakeholders() {
     },
     {
       id: 'world-bank',
-      name: 'World Bank',
+      name: 'World Bank; IDEAS Project',
       logoSrc: '/world-bank-logo.png',
       alt: 'World Bank Group Logo'
     },
     {
       id: 'fme',
-      name: 'Federal Ministry Of Education',
+      name: 'Federal Ministry Of Education; TVET',
       logoSrc: '/fme-logo.png',
       alt: 'Federal Ministry Of Education Logo'
     }
