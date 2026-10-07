@@ -1,103 +1,82 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Globe2, GraduationCap, ExternalLink } from 'lucide-react';
 
 export default function Stakeholders() {
   const partners = [
     {
       id: 'naseni',
       name: 'NASENI',
-      fullTitle: 'National Agency for Science and Engineering Infrastructure',
-      scope: 'Statutory Technical Partner',
-      description: 'Collaborating on high-level capacity building, industrial engineering upskilling, and institutional workforce transformation initiatives across Nigeria.',
-      badge: 'Federal Agency',
-      icon: Building2,
-      color: 'from-brand-800 to-emerald-700',
-      accent: 'border-emerald-500/40'
+      logo: (
+        // NASENI Cogwheel & Crest emblem
+        <svg viewBox="0 0 100 100" className="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="44" stroke="#15803d" strokeWidth="4" strokeDasharray="6 3" />
+          <circle cx="50" cy="50" r="34" fill="#f0fdf4" stroke="#16a34a" strokeWidth="2.5" />
+          <path d="M50 24L56 36H44L50 24Z" fill="#15803d" />
+          <path d="M50 76L44 64H56L50 76Z" fill="#15803d" />
+          <path d="M24 50L36 44V56L24 50Z" fill="#15803d" />
+          <path d="M76 50L64 56V44L76 50Z" fill="#15803d" />
+          <circle cx="50" cy="50" r="14" fill="#15803d" />
+          <circle cx="50" cy="50" r="6" fill="#ffffff" />
+        </svg>
+      )
     },
     {
-      id: 'worldbank-ideas',
-      name: 'World Bank (IDEAS Project)',
-      fullTitle: 'Innovation Development and Effectiveness in the Acquisition of Skills',
-      scope: 'International Development Partner',
-      description: 'Strengthening youth employability, institutional capacity, and quality skill acquisition in formal and informal apprenticeship frameworks.',
-      badge: 'Multilateral Initiative',
-      icon: Globe2,
-      color: 'from-blue-700 to-indigo-800',
-      accent: 'border-blue-500/40'
+      id: 'ideas',
+      name: 'IDEAS Project',
+      logo: (
+        // World Bank / IDEAS Skills & Globe emblem
+        <svg viewBox="0 0 100 100" className="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="44" stroke="#0284c7" strokeWidth="3.5" />
+          <ellipse cx="50" cy="50" rx="20" ry="44" stroke="#0284c7" strokeWidth="2" strokeDasharray="3 2" />
+          <line x1="6" y1="50" x2="94" y2="50" stroke="#0284c7" strokeWidth="2" />
+          <line x1="16" y1="30" x2="84" y2="30" stroke="#0284c7" strokeWidth="1.5" />
+          <line x1="16" y1="70" x2="84" y2="70" stroke="#0284c7" strokeWidth="1.5" />
+          <circle cx="50" cy="50" r="16" fill="#0369a1" />
+          <path d="M44 50L48 54L56 44" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      )
     },
     {
-      id: 'fme-tvet',
-      name: 'Federal Ministry of Education',
-      fullTitle: 'Technical and Vocational Education and Training (TVET)',
-      scope: 'Federal Education & Skills Division',
-      description: 'Designing competency-based curricula, standard operating frameworks, and vocational skill assessments for sustainable workforce productivity.',
-      badge: 'Federal Ministry',
-      icon: GraduationCap,
-      color: 'from-orange-700 to-amber-700',
-      accent: 'border-orange-500/40'
+      id: 'tvet',
+      name: 'TVET',
+      logo: (
+        // Federal Ministry of Education / TVET Technical Crest
+        <svg viewBox="0 0 100 100" className="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="12" width="76" height="76" rx="20" stroke="#ea580c" strokeWidth="3.5" fill="#fff7ed" />
+          <path d="M50 24L74 37L50 50L26 37L50 24Z" fill="#ea580c" />
+          <path d="M34 46V62C34 66 41 72 50 72C59 72 66 66 66 62V46" stroke="#c2410c" strokeWidth="3.5" strokeLinecap="round" />
+          <path d="M74 41V57" stroke="#ea580c" strokeWidth="3" strokeLinecap="round" />
+        </svg>
+      )
     }
   ];
 
   return (
-    <section className="py-20 bg-slate-50 border-t border-slate-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-slate-50 border-t border-slate-200/70">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold uppercase tracking-wider mb-3 border border-orange-200">
-            Trusted Strategic Partnerships
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold uppercase tracking-wider mb-2 border border-orange-200">
             Strategic Stakeholder Collaborations
-          </h2>
-          <p className="mt-3 text-base text-slate-600 leading-relaxed">
-            WEI Solutions Ltd maintains active collaborative capability with leading national and multilateral institutions to deliver measurable, grounded impact.
-          </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {partners.map((partner) => {
-            const Icon = partner.icon;
-            return (
-              <motion.div
-                key={partner.id}
-                whileHover={{ y: -6, scale: 1.01 }}
-                className={`bg-white rounded-3xl p-8 border ${partner.accent} shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${partner.color} text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform`}>
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <span className="text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-slate-100 text-slate-700">
-                      {partner.badge}
-                    </span>
-                  </div>
-
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-orange-600 block mb-1">
-                    {partner.scope}
-                  </span>
-
-                  <h3 className="text-xl font-black text-slate-900 mb-2">
-                    {partner.name}
-                  </h3>
-
-                  <div className="text-xs font-semibold text-slate-500 mb-4 pb-3 border-b border-slate-100 leading-snug">
-                    {partner.fullTitle}
-                  </div>
-
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {partner.description}
-                  </p>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-700">
-                  <span>Collaborative Delivery</span>
-                  <div className="w-2 h-2 rounded-full bg-emerald-500" />
-                </div>
-              </motion.div>
-            );
-          })}
+        {/* Clean Logo Grid just like NASENI partner carousel */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 items-center justify-center max-w-4xl mx-auto">
+          {partners.map((partner) => (
+            <motion.div
+              key={partner.id}
+              whileHover={{ y: -6, scale: 1.02 }}
+              className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-orange-300 transition-all duration-300 flex flex-col items-center justify-center text-center group cursor-default"
+            >
+              <div className="mb-5 p-3 rounded-2xl bg-slate-50/80 group-hover:bg-white group-hover:scale-105 transition-all flex items-center justify-center">
+                {partner.logo}
+              </div>
+              <h3 className="text-lg font-black tracking-tight text-slate-900 group-hover:text-orange-600 transition-colors">
+                {partner.name}
+              </h3>
+            </motion.div>
+          ))}
         </div>
 
       </div>
