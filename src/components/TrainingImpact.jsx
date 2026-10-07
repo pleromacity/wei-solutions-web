@@ -56,10 +56,10 @@ export default function TrainingImpact() {
   ];
 
   return (
-    <section id="impact" className="py-24 bg-white border-b border-slate-100 relative overflow-hidden">
+    <section id="impact" className="py-24 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800/80 relative overflow-hidden transition-colors duration-300">
       
       {/* Background glow circle */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-50/60 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-50/60 dark:bg-emerald-950/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -71,14 +71,14 @@ export default function TrainingImpact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3 border border-brand-200">
-            <Trophy className="w-3.5 h-3.5 text-brand-700" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 dark:bg-brand-950/60 text-brand-800 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-brand-200 dark:border-brand-800/60">
+            <Trophy className="w-3.5 h-3.5 text-brand-700 dark:text-emerald-400" />
             Empirical Curriculum Design
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             The Science of Engagement & Gamified Training
           </h2>
-          <p className="mt-4 text-base text-slate-600 leading-relaxed">
+          <p className="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
             According to industry data cited in our curriculum methodology, adult learners achieve dramatically superior results when education incorporates gamified, interactive, and experiential techniques.
           </p>
         </motion.div>
@@ -95,23 +95,23 @@ export default function TrainingImpact() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className={`p-7 rounded-3xl border ${stat.borderColor} ${stat.bgColor} flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden group`}
+                className={`p-7 rounded-3xl border ${stat.borderColor} dark:border-slate-700/80 ${stat.bgColor} dark:bg-slate-900 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden group`}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-2.5 rounded-xl bg-white shadow-xs text-slate-800 border border-slate-100 group-hover:scale-110 transition-transform">
-                    <Icon className="w-5 h-5 text-slate-700" />
+                  <div className="p-2.5 rounded-xl bg-white dark:bg-slate-800 shadow-xs text-slate-800 dark:text-slate-200 border border-slate-100 dark:border-slate-700 group-hover:scale-110 transition-transform">
+                    <Icon className="w-5 h-5 text-slate-700 dark:text-slate-200" />
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Industry Metric</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Industry Metric</span>
                 </div>
 
                 <div>
                   <div className={`text-4xl sm:text-5xl font-black mb-2 tracking-tight text-transparent bg-clip-text bg-gradient-to-br ${stat.color}`}>
                     {stat.percentage}
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2 leading-snug">
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
                     {stat.label}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                     {stat.description}
                   </p>
                 </div>

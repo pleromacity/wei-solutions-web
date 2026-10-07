@@ -31,10 +31,10 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-us" className="py-24 bg-white border-b border-slate-100 relative overflow-hidden">
+    <section id="why-us" className="py-24 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800/80 relative overflow-hidden transition-colors duration-300">
       
       {/* Decorative gradient blur */}
-      <div className="absolute top-10 right-10 w-96 h-96 bg-brand-50/70 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-10 right-10 w-96 h-96 bg-brand-50/70 dark:bg-emerald-950/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -46,14 +46,14 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3 border border-brand-200">
-            <Sparkles className="w-3.5 h-3.5 text-brand-700" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 dark:bg-brand-950/60 text-brand-800 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-brand-200 dark:border-brand-800/60">
+            <Sparkles className="w-3.5 h-3.5 text-brand-700 dark:text-emerald-400" />
             Competitive Differentiator
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             WHY CHOOSE US
           </h2>
-          <p className="mt-3 text-base text-slate-600">
+          <p className="mt-3 text-base text-slate-600 dark:text-slate-300">
             Three fundamental pillars that set WEI Solutions Ltd apart in delivering high-impact, measurable corporate results.
           </p>
         </motion.div>
@@ -70,32 +70,32 @@ export default function WhyChooseUs() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="bg-slate-50/80 hover:bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 hover:border-brand-400 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="bg-slate-50/80 dark:bg-slate-900 hover:bg-white dark:hover:bg-slate-850 rounded-3xl p-8 sm:p-10 border border-slate-200/80 dark:border-slate-800 hover:border-brand-400 dark:hover:border-emerald-500 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Subtle corner shimmer */}
-                <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-brand-100/50 to-transparent rounded-bl-full pointer-events-none group-hover:scale-125 transition-transform" />
+                <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-brand-100/50 dark:from-brand-900/20 to-transparent rounded-bl-full pointer-events-none group-hover:scale-125 transition-transform" />
 
                 <div>
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-tr ${pillar.gradient} text-white flex items-center justify-center shadow-lg shadow-brand-900/15 mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform`}>
                     <Icon className="w-8 h-8" />
                   </div>
                   
-                  <div className="inline-block px-2.5 py-1 rounded-full bg-brand-100/70 text-brand-800 text-[11px] font-extrabold uppercase tracking-wider mb-2">
+                  <div className="inline-block px-2.5 py-1 rounded-full bg-brand-100/70 dark:bg-brand-950/80 text-brand-800 dark:text-emerald-400 text-[11px] font-extrabold uppercase tracking-wider mb-2">
                     {pillar.badge}
                   </div>
                   
-                  <h3 className="text-xl font-black text-slate-900 mb-4 group-hover:text-brand-800 transition-colors leading-tight">
+                  <h3 className="text-xl font-black text-slate-900 dark:text-white mb-4 group-hover:text-brand-800 dark:group-hover:text-emerald-400 transition-colors leading-tight">
                     {pillar.title}
                   </h3>
                   
-                  <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                     {pillar.description}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-5 border-t border-slate-200/70 flex items-center justify-between text-xs font-bold text-brand-700">
+                <div className="mt-8 pt-5 border-t border-slate-200/70 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-brand-700 dark:text-emerald-400">
                   <span>Guaranteed Standards</span>
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 </div>
               </motion.div>
             );

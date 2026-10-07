@@ -4,7 +4,7 @@ import { CheckCircle, Building, Briefcase, Award, ShieldCheck, ArrowUpRight } fr
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden border-b border-slate-100">
+    <section id="about" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden border-b border-slate-100 dark:border-slate-800/80 transition-colors duration-300">
       
       {/* Decorative background grid subtle */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,15 +100,15 @@ export default function AboutUs() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-bold tracking-wider uppercase border border-brand-200/60">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-emerald-400 text-xs font-bold tracking-wider uppercase border border-brand-200/60 dark:border-brand-800/60">
               About WEI Solutions Ltd
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug">
-              Collaborating to Build and Sustain <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-emerald-600">Organizational Capability</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
+              Collaborating to Build and Sustain <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-emerald-600 dark:from-brand-400 dark:to-emerald-400">Organizational Capability</span>
             </h2>
 
-            <div className="space-y-4 text-slate-600 text-base leading-relaxed">
+            <div className="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
               <p>
                 With a seasoned team of professional consultants spanning management advisory, Human Resource advisory, and business development consulting, we deliver measurable value and exceptional professionalism in Nigeria.
               </p>
@@ -120,30 +120,46 @@ export default function AboutUs() {
               </p>
             </div>
 
+            {/* Real-world Interactive Training Visual Highlight */}
+            <div className="relative rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800 shadow-md group">
+              <img 
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" 
+                alt="Corporate Training and Professional Workshop Session" 
+                className="w-full h-48 sm:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end p-5">
+                <div className="text-white">
+                  <div className="text-xs font-bold text-emerald-400 uppercase tracking-wider">In-Person & Hands-On</div>
+                  <div className="text-sm sm:text-base font-extrabold">Executive Development, Capacity Building & Workforce Strategy</div>
+                </div>
+              </div>
+            </div>
+
             {/* Feature Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <motion.div 
                 whileHover={{ y: -3 }}
-                className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-brand-400 hover:shadow-md transition-all"
+                className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-800/80 hover:border-brand-400 dark:hover:border-emerald-500 hover:shadow-md transition-all"
               >
-                <div className="text-brand-700 font-bold text-sm mb-1.5 flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-emerald-600" />
+                <div className="text-brand-700 dark:text-emerald-400 font-bold text-sm mb-1.5 flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   Hands-On In-Country Presence
                 </div>
-                <div className="text-xs text-slate-600 leading-normal">
+                <div className="text-xs text-slate-600 dark:text-slate-400 leading-normal">
                   Close collaboration with statutory and strategic technical agencies to guarantee grounded impact.
                 </div>
               </motion.div>
 
               <motion.div 
                 whileHover={{ y: -3 }}
-                className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-brand-400 hover:shadow-md transition-all"
+                className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:bg-white dark:hover:bg-slate-800/80 hover:border-brand-400 dark:hover:border-emerald-500 hover:shadow-md transition-all"
               >
-                <div className="text-brand-700 font-bold text-sm mb-1.5 flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-emerald-600" />
+                <div className="text-brand-700 dark:text-emerald-400 font-bold text-sm mb-1.5 flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   Sustainable Growth Trajectory
                 </div>
-                <div className="text-xs text-slate-600 leading-normal">
+                <div className="text-xs text-slate-600 dark:text-slate-400 leading-normal">
                   Developing enduring systems and continuous feedback loops that reinforce performance long after training concludes.
                 </div>
               </motion.div>

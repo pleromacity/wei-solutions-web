@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SidebarNav from './components/SidebarNav';
 import MinimalHeader from './components/MinimalHeader';
@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-800 antialiased selection:bg-orange-500 selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 font-sans text-slate-800 dark:text-slate-100 antialiased selection:bg-orange-500 selection:text-white relative transition-colors duration-300">
       
       {/* 1. PIN ATTACHED DIRECTLY TO TOP-LEFT CORNER */}
       <SidebarNav activePage={activePage} setActivePage={handleNavigate} />

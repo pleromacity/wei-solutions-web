@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -79,7 +79,7 @@ export default function SidebarNav({ activePage, setActivePage }) {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 26, stiffness: 240 }}
-            className="fixed top-0 left-0 bottom-0 w-72 sm:w-80 bg-white z-50 shadow-2xl flex flex-col border-r border-slate-200 overflow-hidden"
+            className="fixed top-0 left-0 bottom-0 w-72 sm:w-80 bg-white dark:bg-slate-900 z-50 shadow-2xl flex flex-col border-r border-slate-200 dark:border-slate-800 overflow-hidden"
           >
             {/* Header */}
             <div className="p-5 pt-14 bg-gradient-to-br from-slate-950 via-slate-900 to-brand-950 text-white border-b border-white/10 relative">
@@ -111,26 +111,26 @@ export default function SidebarNav({ activePage, setActivePage }) {
                     onClick={() => handleSelect(item.id)}
                     className={`w-full text-left px-3.5 py-3 rounded-xl flex items-center justify-between transition-all duration-200 ${
                       isCurrent
-                        ? 'bg-orange-50/60 text-slate-900 font-bold border-l-4 border-orange-500 shadow-xs'
-                        : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900 font-semibold'
+                        ? 'bg-orange-50/70 dark:bg-slate-800 text-slate-900 dark:text-white font-bold border-l-4 border-orange-500 shadow-xs'
+                        : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white font-semibold'
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                        isCurrent ? 'bg-gradient-to-tr from-brand-700 to-orange-600 text-white shadow-xs' : 'bg-slate-100 text-slate-600'
+                        isCurrent ? 'bg-gradient-to-tr from-brand-700 to-orange-600 text-white shadow-xs' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'
                       }`}>
                         <Icon className="w-4 h-4" />
                       </div>
                       <span className="text-xs sm:text-sm">{item.label}</span>
                     </div>
-                    <ChevronRight className={`w-3.5 h-3.5 ${isCurrent ? 'text-orange-500' : 'text-slate-300'}`} />
+                    <ChevronRight className={`w-3.5 h-3.5 ${isCurrent ? 'text-orange-500' : 'text-slate-300 dark:text-slate-600'}`} />
                   </button>
                 );
               })}
             </div>
 
             {/* Bottom Consultation CTA with warm orange gradient accent */}
-            <div className="p-4 border-t border-slate-100 bg-slate-50">
+            <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/90">
               <button
                 onClick={() => handleSelect('contact')}
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-brand-800 via-brand-700 to-orange-600 text-white font-bold text-xs shadow-md hover:brightness-105 transition-all"

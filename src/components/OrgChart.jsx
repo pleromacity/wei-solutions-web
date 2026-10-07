@@ -4,7 +4,7 @@ import { Users, Shield, Briefcase, Award, ChevronDown, Sparkles } from 'lucide-r
 
 export default function OrgChart() {
   return (
-    <section id="leadership" className="py-24 bg-slate-50 border-b border-slate-100 relative overflow-hidden">
+    <section id="leadership" className="py-24 bg-slate-50 dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800/80 relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -15,14 +15,14 @@ export default function OrgChart() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider mb-3 border border-brand-200">
-            <Sparkles className="w-3.5 h-3.5 text-brand-700" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-100 dark:bg-brand-950/60 text-brand-800 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3 border border-brand-200 dark:border-brand-800/60">
+            <Sparkles className="w-3.5 h-3.5 text-brand-700 dark:text-emerald-400" />
             Executive Governance & Operational Staffing
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Our Organizational Structure & Staffing
           </h2>
-          <p className="mt-3 text-base text-slate-600 leading-relaxed">
+          <p className="mt-3 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
             At WEI Solutions Ltd, we assemble world-class professionals with proven in-country experience and close collaboration with key stakeholders to ensure seamless, real-time project delivery.
           </p>
         </motion.div>
@@ -33,7 +33,7 @@ export default function OrgChart() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/80 shadow-lg shadow-slate-900/5 overflow-x-auto relative"
+          className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-12 border border-slate-200/80 dark:border-slate-800 shadow-lg shadow-slate-900/5 overflow-x-auto relative"
         >
           <div className="min-w-[800px] flex flex-col items-center">
             
@@ -68,11 +68,11 @@ export default function OrgChart() {
               <div className="flex-1 flex flex-col items-center">
                 <motion.div 
                   whileHover={{ scale: 1.03, y: -2 }}
-                  className="w-52 p-4 rounded-2xl bg-brand-50/90 border-2 border-brand-500 text-center shadow-sm"
+                  className="w-52 p-4 rounded-2xl bg-brand-50/90 dark:bg-slate-800 border-2 border-brand-500 text-center shadow-sm"
                 >
-                  <div className="text-[10px] font-black uppercase tracking-wider text-brand-700">Operations Wing</div>
-                  <div className="text-lg font-black text-slate-900">COO</div>
-                  <div className="text-[11px] text-slate-600 font-medium">Chief Operating Officer</div>
+                  <div className="text-[10px] font-black uppercase tracking-wider text-brand-700 dark:text-emerald-400">Operations Wing</div>
+                  <div className="text-lg font-black text-slate-900 dark:text-white">COO</div>
+                  <div className="text-[11px] text-slate-600 dark:text-slate-400 font-medium">Chief Operating Officer</div>
                 </motion.div>
 
                 {/* Sub-connector line */}
@@ -90,10 +90,10 @@ export default function OrgChart() {
                     <motion.div 
                       key={nIdx}
                       whileHover={{ scale: 1.04 }}
-                      className="p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/90 text-center shadow-xs transition-colors"
+                      className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-750 border border-slate-200/90 dark:border-slate-700 text-center shadow-xs transition-colors"
                     >
-                      <div className="text-xs font-bold text-slate-900">{node.title}</div>
-                      <div className="text-[10px] text-brand-700 font-semibold">{node.role}</div>
+                      <div className="text-xs font-bold text-slate-900 dark:text-white">{node.title}</div>
+                      <div className="text-[10px] text-brand-700 dark:text-emerald-400 font-semibold">{node.role}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -103,11 +103,11 @@ export default function OrgChart() {
               <div className="flex-1 flex flex-col items-center">
                 <motion.div 
                   whileHover={{ scale: 1.03, y: -2 }}
-                  className="w-52 p-4 rounded-2xl bg-brand-50/90 border-2 border-brand-500 text-center shadow-sm"
+                  className="w-52 p-4 rounded-2xl bg-brand-50/90 dark:bg-slate-800 border-2 border-brand-500 text-center shadow-sm"
                 >
-                  <div className="text-[10px] font-black uppercase tracking-wider text-brand-700">Finance & Strategy</div>
-                  <div className="text-sm font-black text-slate-900 leading-tight">CFO / LEAD STRATEGIST</div>
-                  <div className="text-[11px] text-slate-600 font-medium">Lead Strategic Planning</div>
+                  <div className="text-[10px] font-black uppercase tracking-wider text-brand-700 dark:text-emerald-400">Finance & Strategy</div>
+                  <div className="text-sm font-black text-slate-900 dark:text-white leading-tight">CFO / LEAD STRATEGIST</div>
+                  <div className="text-[11px] text-slate-600 dark:text-slate-400 font-medium">Lead Strategic Planning</div>
                 </motion.div>
 
                 {/* Sub-connector line */}
@@ -116,10 +116,10 @@ export default function OrgChart() {
                 {/* CFO Sub-node */}
                 <motion.div 
                   whileHover={{ scale: 1.04 }}
-                  className="w-full max-w-[200px] p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/90 text-center shadow-xs transition-colors"
+                  className="w-full max-w-[200px] p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-750 border border-slate-200/90 dark:border-slate-700 text-center shadow-xs transition-colors"
                 >
-                  <div className="text-xs font-bold text-slate-900">Finance & Audit</div>
-                  <div className="text-[10px] text-brand-700 font-semibold">Controls & Reporting</div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white">Finance & Audit</div>
+                  <div className="text-[10px] text-brand-700 dark:text-emerald-400 font-semibold">Controls & Reporting</div>
                 </motion.div>
               </div>
 
@@ -127,11 +127,11 @@ export default function OrgChart() {
               <div className="flex-1 flex flex-col items-center">
                 <motion.div 
                   whileHover={{ scale: 1.03, y: -2 }}
-                  className="w-52 p-4 rounded-2xl bg-brand-50/90 border-2 border-brand-500 text-center shadow-sm"
+                  className="w-52 p-4 rounded-2xl bg-brand-50/90 dark:bg-slate-800 border-2 border-brand-500 text-center shadow-sm"
                 >
-                  <div className="text-[10px] font-black uppercase tracking-wider text-brand-700">Corporate Governance</div>
-                  <div className="text-sm font-black text-slate-900 leading-tight">COMMUNICATION & LEGAL</div>
-                  <div className="text-[11px] text-slate-600 font-medium">Statutory Compliance</div>
+                  <div className="text-[10px] font-black uppercase tracking-wider text-brand-700 dark:text-emerald-400">Corporate Governance</div>
+                  <div className="text-sm font-black text-slate-900 dark:text-white leading-tight">COMMUNICATION & LEGAL</div>
+                  <div className="text-[11px] text-slate-600 dark:text-slate-400 font-medium">Statutory Compliance</div>
                 </motion.div>
 
                 {/* Sub-connector line */}
@@ -147,10 +147,10 @@ export default function OrgChart() {
                     <motion.div 
                       key={lIdx}
                       whileHover={{ scale: 1.04 }}
-                      className="p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/90 text-center shadow-xs transition-colors"
+                      className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-750 border border-slate-200/90 dark:border-slate-700 text-center shadow-xs transition-colors"
                     >
-                      <div className="text-xs font-bold text-slate-900">{legal.title}</div>
-                      <div className="text-[10px] text-brand-700 font-semibold">{legal.role}</div>
+                      <div className="text-xs font-bold text-slate-900 dark:text-white">{legal.title}</div>
+                      <div className="text-[10px] text-brand-700 dark:text-emerald-400 font-semibold">{legal.role}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -162,7 +162,7 @@ export default function OrgChart() {
         </motion.div>
 
         {/* Note below Org Chart */}
-        <div className="mt-8 text-center text-xs text-slate-500">
+        <div className="mt-8 text-center text-xs text-slate-500 dark:text-slate-400">
           Source: Official WEI Solutions Ltd Organizational Hierarchy & Governance Chart (Page 67).
         </div>
 
