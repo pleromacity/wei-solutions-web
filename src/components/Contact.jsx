@@ -55,7 +55,7 @@ export default function Contact() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/programmes.weisolutions@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/74e59f6e174c44382b988a49673bb1a4', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
